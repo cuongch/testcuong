@@ -1,0 +1,227 @@
+
+C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC>cd "c:\Users\Public\Docum
+ents\git\fno & fnp"
+
+c:\Users\Public\Documents\git\fno & fnp>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 465D-5F92
+
+ Directory of c:\Users\Public\Documents\git\fno & fnp
+
+12/31/2015  08:41 AM    <DIR>          .
+12/31/2015  08:41 AM    <DIR>          ..
+04/26/2016  02:40 PM    <DIR>          .git
+02/11/2016  02:58 PM    <DIR>          publisher
+01/25/2016  04:56 AM    <DIR>          vcg
+               0 File(s)              0 bytes
+               5 Dir(s)   6,424,600,576 bytes free
+
+c:\Users\Public\Documents\git\fno & fnp>cd publisher
+
+c:\Users\Public\Documents\git\fno & fnp\publisher>nmake -f makefile veryclean
+
+Microsoft (R) Program Maintenance Utility Version 11.00.60610.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+NMAKE : fatal error U1052: file 'makefile' not found
+Stop.
+
+c:\Users\Public\Documents\git\fno & fnp\publisher>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 465D-5F92
+
+ Directory of c:\Users\Public\Documents\git\fno & fnp\publisher
+
+02/11/2016  02:58 PM    <DIR>          .
+02/11/2016  02:58 PM    <DIR>          ..
+01/25/2016  05:09 AM    <DIR>          DO NOT USE
+11/13/2015  05:17 AM    <DIR>          examples
+11/20/2015  03:35 PM    <DIR>          fnpcsharpwrapper
+04/26/2016  02:40 PM    <DIR>          i86_n3
+02/11/2016  03:05 PM    <DIR>          linux
+02/10/2016  10:38 PM    <DIR>          machind
+02/10/2016  10:50 PM    <DIR>          x64_n6
+               0 File(s)              0 bytes
+               9 Dir(s)   6,424,600,576 bytes free
+
+c:\Users\Public\Documents\git\fno & fnp\publisher>cd i86_n3
+
+c:\Users\Public\Documents\git\fno & fnp\publisher\i86_n3>nmake -f makefile veryc
+lean
+
+Microsoft (R) Program Maintenance Utility Version 11.00.60610.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        if exist lmnewgen.obj ren lmnewgen.obj lmnewgen.sav
+        if exist lmnewgen_md.obj ren lmnewgen_md.obj lmnewgen_md.sav
+        if exist asrgen.obj copy asrgen.obj asrgen_obj.bak
+        1 file(s) copied.
+        if exist *.obj del *.obj
+        if exist lmnewgen_md.sav ren lmnewgen_md.sav lmnewgen_md.obj
+        if exist lmnewgen.sav ren lmnewgen.sav lmnewgen.obj
+        if exist asrgen_obj.bak move asrgen_obj.bak asrgen.obj
+        1 file(s) moved.
+        if exist lmnewgen.exe del lmnewgen.exe
+        if exist lmcrypt.exe del lmcrypt.exe
+        if exist DSINTL.exe del DSINTL.exe
+        if exist lmcode.c del lmcode.c
+        if exist lmcode.obj del lmcode.obj
+        if exist lm_new.c del lm_new*.c
+        if exist lm_new.obj del lm_new*.obj
+        if exist lsrvend.c del lsrvend.c
+        if exist lmflex.exe del lmflex.exe
+        if exist lcclient.exe del lcclient.exe
+        if exist lmflexsdt.exe del lmflexsdt.exe
+        if exist *.ilk del *.ilk
+        if exist vc60.pdb rename vc60.pdb vc60.sav
+        if exist *.p* del *.p*
+        if exist vc60.sav rename vc60.sav vc60.pdb
+        if exist DSINTL.lib del DSINTL.lib
+        if exist DSINTL.dll del DSINTL.dll
+        if exist DSINTL.exp del DSINTL.exp
+        if exist lmgr11.dll del lmgr11.dll
+        if exist lmgr11.exp del lmgr11.exp
+        if exist lmgr11.lib del lmgr11.lib
+        if exist *.bin del *.bin
+        if exist VendorLicenseServerMsgs.h del VendorLicenseServerMsgs.h
+        if exist VendorLicenseServerMsgs.res del VendorLicenseServerMsgs.res
+        if exist VendorLicenseServerMsgs.rc del VendorLicenseServerMsgs.rc
+        if exist FnplmLicenseServerMsgs.h del FnplmLicenseServerMsgs.h
+        if exist FnplmLicenseServerMsgs.res del FnplmLicenseServerMsgs.res
+        if exist FnplmLicenseServerMsgs.rc del FnplmLicenseServerMsgs.rc
+        if exist lmhostid.exe del lmhostid.exe
+        if exist lmver.exe del lmver.exe
+        if exist lmcksum.exe del lmcksum.exe
+        if exist lmdown.exe del lmdown.exe
+        if exist lmremove.exe del lmremove.exe
+        if exist lmreread.exe del lmreread.exe
+        if exist lmswitchr.exe del lmswitchr.exe
+        if exist lmstat.exe del lmstat.exe
+        if exist lmborrow.exe del lmborrow.exe
+        if exist lmdiag.exe del lmdiag.exe
+        if exist lminstall.exe del lminstall.exe
+        if exist lmpath.exe del lmpath.exe
+        if exist lmnewlog.exe del lmnewlog.exe
+
+c:\Users\Public\Documents\git\fno & fnp\publisher\i86_n3>nmake -f makefile DONGL
+E=1
+
+Microsoft (R) Program Maintenance Utility Version 11.00.60610.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        lmrand1 -i ..\machind\lsvendor.c
+        cl /c /nologo /c  /I..\machind /I. /MT  -I../h lmcode.c
+lmcode.c
+        LINK /nologo /NODEFAULTLIB /OPT:NOREF /NXCOMPAT /DynamicBase  /subsystem
+:CONSOLE lmnewgen.obj lmcode.obj libsimplifier.lib .\activation\lib\libnoact.lib
+  lmgr.lib libcrvs.lib libsb.lib oldnames.lib kernel32.lib user32.lib netapi32.l
+ib  advapi32.lib  gdi32.lib comdlg32.lib  comctl32.lib wsock32.lib  Rpcrt4.lib o
+leaut32.lib Ole32.lib Wbemuuid.lib wintrust.lib crypt32.lib lmgr_dongle.lib libc
+mt.lib /out:lmnewgen.exe
+        if exist lm_new.c del lm_new.c
+        lmnewgen.exe DSINTL
+v8.1+ FlexNet, using TRL
+Generating header file lmprikey.h
+        cl /nologo /c  /I..\machind /I. /MT  /Folm_new.obj lm_new.c
+lm_new.c
+        cl /nologo /c  /I..\machind /I. /MT /O1   /DNO_ACTIVATION_SUPPORT ..\mac
+hind\lmflex.c
+lmflex.c
+        LINK /nologo /NODEFAULTLIB /OPT:NOREF /NXCOMPAT /DynamicBase  /out:lmfle
+x.exe lmflex.obj lm_new.obj lmgr.lib libsb.lib libcrvs.lib .\activation\lib\libn
+oact.lib oldnames.lib kernel32.lib user32.lib netapi32.lib  advapi32.lib  gdi32.
+lib comdlg32.lib  comctl32.lib wsock32.lib  Rpcrt4.lib oleaut32.lib Ole32.lib Wb
+emuuid.lib wintrust.lib crypt32.lib libcmt.lib lmgr_dongle.lib
+        if exist lmflex.obj del lmflex.obj
+        cl /nologo /c  /I..\machind /I. /MT /O1   /DNO_ACTIVATION_SUPPORT ..\mac
+hind\lmcrypt.c
+lmcrypt.c
+        LINK /nologo /NODEFAULTLIB /OPT:NOREF /NXCOMPAT /DynamicBase  /out:lmcry
+pt.exe lmcrypt.obj lmgr.lib libsb.lib libcrvs.lib .\activation\lib\libnoact.lib
+oldnames.lib kernel32.lib user32.lib netapi32.lib  advapi32.lib  gdi32.lib comdl
+g32.lib  comctl32.lib wsock32.lib  Rpcrt4.lib oleaut32.lib Ole32.lib Wbemuuid.li
+b wintrust.lib crypt32.lib libcmt.lib lmgr_dongle.lib
+        cl /nologo /c  /I..\machind /I. /MT /O1   /DNO_ACTIVATION_SUPPORT -I../h
+ /Folsvendor.obj lsrvend.c
+lsrvend.c
+        RC -r -fo DSINTL.res DSINTL.rc
+Microsoft (R) Windows (R) Resource Compiler Version 6.2.9200.20789
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        LINK /nologo /NODEFAULTLIB /OPT:NOREF /NXCOMPAT /DynamicBase  /subsystem
+:console /out:DSINTL.exe lsvendor.obj lm_new.obj   lmgras.lib lmgrs.lib lmgr.lib
+ libsb.lib libcrvs.lib libcmt.lib oldnames.lib kernel32.lib user32.lib netapi32.
+lib  advapi32.lib  gdi32.lib comdlg32.lib  comctl32.lib wsock32.lib  Rpcrt4.lib
+oleaut32.lib Ole32.lib Wbemuuid.lib wintrust.lib crypt32.lib lmgr_dongle.lib .\a
+ctivation\lib\libnoact.lib DSINTL.res
+        copy lmutil.exe lmhostid.exe
+        1 file(s) copied.
+        copy lmutil.exe lmver.exe
+        1 file(s) copied.
+        copy lmutil.exe lmdown.exe
+        1 file(s) copied.
+        copy lmutil.exe lmremove.exe
+        1 file(s) copied.
+        copy lmutil.exe lmreread.exe
+        1 file(s) copied.
+        copy lmutil.exe lmswitchr.exe
+        1 file(s) copied.
+        copy lmutil.exe lmstat.exe
+        1 file(s) copied.
+        copy lmutil.exe lmdiag.exe
+        1 file(s) copied.
+        copy lmutil.exe lminstall.exe
+        1 file(s) copied.
+        copy lmutil.exe lmborrow.exe
+        1 file(s) copied.
+        copy lmutil.exe lmpath.exe
+        1 file(s) copied.
+        copy lmutil.exe lmnewlog.exe
+        1 file(s) copied.
+
+c:\Users\Public\Documents\git\fno & fnp\publisher\i86_n3>nmake -f makefile.cshar
+p csharp-all
+
+Microsoft (R) Program Maintenance Utility Version 11.00.60610.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+        cl -DPC /nologo /c  /I..\machind /I. /MT /O1  /DWINDOWS /I..\machind\act
+ivation\include ..\fnpcsharpwrapper\lmgract\lmgract.c
+lmgract.c
+        LINK /nologo /NODEFAULTLIB /OPT:NOREF /NXCOMPAT /DynamicBase  /SAFESEH /
+def:"..\fnpcsharpwrapper\lmgract\lmgract.def" /out:lmgract.dll lmgract.obj /impl
+ib:"lmgract.lib" /dll lm_new.obj  lmgr_trl.lib libsb.lib libcrvs.lib lmgr.lib li
+bsb.lib libcrvs.lib .\activation\lib\libact.lib libFNPload.lib  .\activation\lib
+\libact.lib libFNPload.lib FNP_Act_Installer.lib oldnames.lib kernel32.lib user3
+2.lib netapi32.lib  advapi32.lib  gdi32.lib comdlg32.lib  comctl32.lib wsock32.l
+ib  Rpcrt4.lib oleaut32.lib Ole32.lib Wbemuuid.lib wintrust.lib crypt32.lib libc
+mt.lib lmgr_dongle_stub.lib
+   Creating library lmgract.lib and object lmgract.exp
+        .\preptool.exe -v ..\fnpcsharpwrapper\lmgract\lmgract.xml
+### Analyzing c:\Users\Public\Documents\git\fno & fnp\publisher\i86_n3\lmgract.d
+ll (Windows x86 32-bit)
+Extracting debuggable Flexera Software LLC components...
+lmgract_libFNP.dll Variant debuggable 32
+### Analyzing c:\Users\Public\Documents\git\fno & fnp\publisher\i86_n3\.\lmgract
+_libFNP.dll (Windows x86 32-bit)
+### Processing c:\Users\Public\Documents\git\fno & fnp\publisher\i86_n3\lmgract.
+dll (Windows x86 32-bit)
+### Processing c:\Users\Public\Documents\git\fno & fnp\publisher\i86_n3\.\lmgrac
+t_libFNP.dll (Windows x86 32-bit)
+        if exist lmgract.obj del lmgract.obj
+        if not exist ..\fnpcsharpwrapper\FlexNetActivation\demoApp\bin\Release m
+kdir ..\fnpcsharpwrapper\FlexNetActivation\demoApp\bin\Release
+        copy lmgract.dll ..\fnpcsharpwrapper\FlexNetActivation\demoApp\bin\Relea
+se
+        1 file(s) copied.
+        copy lmgract_libFNP.dll ..\fnpcsharpwrapper\FlexNetActivation\demoApp\bi
+n\Release
+        1 file(s) copied.
+        copy FnpCommsSoap.dll ..\fnpcsharpwrapper\FlexNetActivation\demoApp\bin\
+Release
+        1 file(s) copied.
+        copy FNP_Act_Installer.dll ..\fnpcsharpwrapper\FlexNetActivation\demoApp
+\bin\Release
+        1 file(s) copied.
+
+c:\Users\Public\Documents\git\fno & fnp\publisher\i86_n3>
