@@ -16,5 +16,10 @@ namespace WindowsFormsApplicationTestGithub
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //This is a modification from Visual Studio 2015
+        }
     }
 }
