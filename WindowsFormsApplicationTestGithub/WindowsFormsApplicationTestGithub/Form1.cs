@@ -21,5 +21,10 @@ namespace WindowsFormsApplicationTestGithub
         {
             //This is a modification from Visual Studio 2015
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //button1 Click Event
+        }
     }
 }
